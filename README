@@ -1,0 +1,77 @@
+libmikmod
+-------------------------------------------
+The MikMod sound library is an excellent way for a programmer to add 
+music and sound effects to an application. It is a powerful and flexible 
+library, with a simple and easy-to-learn API. 
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libesound0-0.2.39-1
+
+Build requirements:
+  autoconf2.5-2.61-1
+  automake1.5-1.5-2
+  binutils-20080624-2
+  cygport-0.4.0-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.2-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical homepage:
+  http://mikmod.raphnet.net/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libmikmod-3.1.11-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libmikmod-3.1.11.cygport all
+
+This will create:
+  /usr/src/libmikmod-3.1.11-src.tar.bz2
+  /usr/src/libmikmod-3.1.11.tar.bz2
+  /usr/src/libmikmod-devel-3.1.11.tar.bz2
+  /usr/src/libmikmod2-3.1.11.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(libmikmod2)
+  /usr/bin/cygmikmod-2.dll
+  /usr/share/doc/libmikmod-3.1.11/AUTHORS
+  /usr/share/doc/libmikmod-3.1.11/COPYING.LIB
+  /usr/share/doc/libmikmod-3.1.11/INSTALL
+  /usr/share/doc/libmikmod-3.1.11/NEWS
+  /usr/share/doc/libmikmod-3.1.11/README
+  /usr/share/doc/libmikmod-3.1.11/TODO
+
+(libmikmod-devel)
+  /usr/bin/libmikmod-config
+  /usr/include/mikmod.h
+  /usr/lib/libmikmod.a
+  /usr/lib/libmikmod.dll.a
+  /usr/lib/libmikmod.la
+  /usr/share/aclocal/libmikmod.m4
+  /usr/share/info/mikmod.info.gz
+  /usr/share/man/man1/libmikmod-config.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 3.1.11-2 -----
+Rebuilt for cygport with several Gentoo patches.
+Created separate lib and devel packages.
+
+----- version 3.1.11-1 -----
+Initial release for Cygwin.
+Includes the 3.1.11-a patches from the author's website.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

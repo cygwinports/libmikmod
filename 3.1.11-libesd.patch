@@ -1,0 +1,14 @@
+--- origsrc/libmikmod-3.1.11/drivers/drv_esd.c	2008-08-31 17:22:10.097674300 -0500
++++ src/libmikmod-3.1.11/drivers/drv_esd.c	2008-08-31 17:25:51.455632600 -0500
+@@ -100,7 +100,11 @@
+ 	if (libesd) return 0;
+ 
+ 	/* load libesd.so */
++#ifdef __CYGWIN__
++	libesd=dlopen("cygesd-0.dll",RTLD_LAZY|RTLD_GLOBAL);
++#else
+ 	libesd=dlopen("libesd.so",RTLD_LAZY|RTLD_GLOBAL);
++#endif
+ 	if (!libesd) return 1;
+ 
+ 	/* resolve function references */
