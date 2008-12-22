@@ -1,7 +1,5 @@
 category: Audio
-requires: cygwin libesound0
-external-source: libmikmod
-sdesc: "MikMod sound library (runtime)"
+sdesc: "MikMod sound library (source)"
 ldesc: "The MikMod sound library is an excellent way for a programmer 
 to add music and sound effects to an application. It is a powerful and 
 flexible library, with a simple and easy-to-learn API. "

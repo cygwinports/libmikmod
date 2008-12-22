@@ -6,16 +6,15 @@ library, with a simple and easy-to-learn API.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  libesound0-0.2.39-1
 
 Build requirements:
-  autoconf2.5-2.61-1
-  automake1.5-1.5-2
+  autoconf2.5-2.63-1
+  automake1.5-1.5-3
   binutils-20080624-2
-  cygport-0.4.0-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool-2.2.2-2
+  libtool-2.2.6a-1
   make-3.81-1
   sed-4.1.5-2
 
@@ -25,17 +24,16 @@ Canonical homepage:
 -------------------------------------------
 
 Build instructions:
-  unpack libmikmod-3.1.11-src.tar.bz2
+  unpack libmikmod-3.1.12-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libmikmod-3.1.11.cygport all
+  cygport ./libmikmod-3.1.12.cygport all
 
 This will create:
-  /usr/src/libmikmod-3.1.11-src.tar.bz2
-  /usr/src/libmikmod-3.1.11.tar.bz2
-  /usr/src/libmikmod-devel-3.1.11.tar.bz2
-  /usr/src/libmikmod2-3.1.11.tar.bz2
+  /usr/src/libmikmod-3.1.12-src.tar.bz2
+  /usr/src/libmikmod-devel-3.1.12.tar.bz2
+  /usr/src/libmikmod2-3.1.12.tar.bz2
 
 -------------------------------------------
 
@@ -43,12 +41,12 @@ Files included in the binary packages:
 
 (libmikmod2)
   /usr/bin/cygmikmod-2.dll
-  /usr/share/doc/libmikmod-3.1.11/AUTHORS
-  /usr/share/doc/libmikmod-3.1.11/COPYING.LIB
-  /usr/share/doc/libmikmod-3.1.11/INSTALL
-  /usr/share/doc/libmikmod-3.1.11/NEWS
-  /usr/share/doc/libmikmod-3.1.11/README
-  /usr/share/doc/libmikmod-3.1.11/TODO
+  /usr/share/doc/libmikmod-3.1.12/AUTHORS
+  /usr/share/doc/libmikmod-3.1.12/COPYING.LIB
+  /usr/share/doc/libmikmod-3.1.12/INSTALL
+  /usr/share/doc/libmikmod-3.1.12/NEWS
+  /usr/share/doc/libmikmod-3.1.12/README
+  /usr/share/doc/libmikmod-3.1.12/TODO
 
 (libmikmod-devel)
   /usr/bin/libmikmod-config
@@ -63,6 +61,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 3.1.12-1 -----
+Version bump.  Fixed OSS driver.
 
 ----- version 3.1.11-2 -----
 Rebuilt for cygport with several Gentoo patches.
