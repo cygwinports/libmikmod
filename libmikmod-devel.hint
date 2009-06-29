@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libmikmod2
+requires: libmikmod2
 external-source: libmikmod
 sdesc: "MikMod sound library (libdevel)"
 ldesc: "The MikMod sound library is an excellent way for a programmer 
