@@ -1,0 +1,37 @@
+DESCRIPTION="MikMod sound library"
+HOMEPAGE="http://mikmod.raphnet.net/"
+SRC_URI="mirror://sourceforge/mikmod/${P}.tar.gz"
+PATCH_URI="
+	mirror://portage/media-libs/${PN}/files/${PN}-3.2.0_beta2-info.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-3.2.0_beta2-doubleRegister.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-CVE-2007-6720.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-CVE-2009-0179.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-3.2.0_beta2-fix-vol-crash.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-3.2.0_beta2-fix-unload-crash.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-3.2.0_beta2-CVE-2009-3995-3996.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-3.2.0_beta2-CVE-2010-2546-2971.patch \
+	mirror://portage/media-libs/${PN}/files/${PN}-3.2.0_beta2-pa-workaround.patch
+	3.1.11-libesd.patch
+	3.1.12-no-undefined.patch
+"
+
+PKG_NAMES="${PN}2 ${PN}-devel"
+libmikmod2_CONTENTS="usr/bin/*-2.dll usr/share/doc/"
+libmikmod_devel_CONTENTS="--exclude=doc usr/bin/${PN}-config usr/include/ usr/lib/ usr/share/"
+
+DIFF_EXCLUDES="mikmod.info"
+
+WANT_AUTOMAKE=1.11
+
+CYGCONF_ARGS="
+	--disable-af
+	--disable-alsa
+	--enable-dl
+	--enable-esd
+	--enable-oss
+	--disable-sam9407
+	--enable-threads
+	--disable-ultra
+	libmikmod_cv_gcc_pthread=no
+	libmikmod_cv_oss_dev_sndstat=yes
+"
