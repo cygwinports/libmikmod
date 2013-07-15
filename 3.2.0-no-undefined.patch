@@ -1,0 +1,11 @@
+--- origsrc/libmikmod-3.2.0/libmikmod/Makefile.in	2013-07-15 02:53:57.155609800 -0500
++++ src/libmikmod-3.2.0/libmikmod/Makefile.in	2013-07-15 02:54:11.564433900 -0500
+@@ -73,7 +73,7 @@ distclean:	clean
+ 	rm -f Makefile
+ 
+ $(LIB): $(OBJ)
+-	$(LIBTOOL) --mode=link $(CC) -version-info 3:0:0 -o $@ $(OBJ) $(LIBRARY_LIB) -rpath $(DESTDIR)$(libdir)
++	$(LIBTOOL) --mode=link $(CC) -version-info 3:0:0 -o $@ $(OBJ) $(LIBRARY_LIB) -rpath $(DESTDIR)$(libdir) -no-undefined
+ 
+ dl_hpux.lo:	$(top_srcdir)/dlapi/dl_hpux.c \
+ 			$(top_srcdir)/dlapi/dlfcn.h

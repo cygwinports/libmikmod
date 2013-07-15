@@ -1,0 +1,39 @@
+NAME="libmikmod"
+VERSION=3.2.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="MikMod sound library"
+DESCRIPTION="The MikMod sound library is an excellent way for a programmer
+to add music and sound effects to an application. It is a powerful and
+flexible library, with a simple and easy-to-learn API. "
+HOMEPAGE="http://mikmod.shlomifish.org/"
+SRC_URI="http://mikmod.shlomifish.org/files/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/libmikmod.git/plain/libmikmod-64bit.patch
+	http://pkgs.fedoraproject.org/cgit/libmikmod.git/plain/libmikmod-strip-lib.patch
+	http://pkgs.fedoraproject.org/cgit/libmikmod.git/plain/libmikmod-CVE-2007-6720.patch
+	http://pkgs.fedoraproject.org/cgit/libmikmod.git/plain/libmikmod-CVE-2009-0179.patch
+	http://pkgs.fedoraproject.org/cgit/libmikmod.git/plain/libmikmod-malloc-fail.patch
+	http://pkgs.fedoraproject.org/cgit/libmikmod.git/plain/libmikmod-cflags.patch
+	3.1.11-libesd.patch
+	3.2.0-no-undefined.patch
+"
+
+PKG_NAMES="${NAME}3 ${NAME}-devel"
+libmikmod3_CONTENTS="usr/bin/*-3.dll usr/share/doc/"
+libmikmod_devel_CONTENTS="--exclude=doc usr/bin/${NAME}-config usr/include/ usr/lib/ usr/share/"
+
+DIFF_EXCLUDES="mikmod.info mikmod.h"
+
+CYGCONF_ARGS="
+	--disable-af
+	--disable-alsa
+	--enable-dl
+	--enable-esd
+	--enable-oss
+	--disable-sam9407
+	--enable-threads
+	--disable-ultra
+	libmikmod_cv_gcc_pthread=yes
+	libmikmod_cv_oss_dev_sndstat=yes
+"
