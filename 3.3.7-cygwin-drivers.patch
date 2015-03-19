@@ -1,0 +1,13 @@
+--- origsrc/libmikmod-3.3.7/configure.ac	2014-08-11 12:50:00.000000000 -0500
++++ src/libmikmod-3.3.7/configure.ac	2015-03-19 06:15:56.327378800 -0500
+@@ -164,8 +164,8 @@ case $host_os in
+      libmikmod_driver_pulseaudio=no
+      libmikmod_driver_stdout=no
+      libmikmod_driver_sdl=no ;;
+-  cygwin*|darwin*)
+-     # cygwin, osx don't need sdl.
++  darwin*)
++     # osx doesn't need sdl.
+      libmikmod_driver_pulseaudio=no
+      libmikmod_driver_sdl=no ;;
+   *) ;;
