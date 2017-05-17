@@ -1,0 +1,11 @@
+--- origsrc/libmikmod-3.3.10/configure.ac	2016-08-31 13:11:00.000000000 -0500
++++ src/libmikmod-3.3.10/configure.ac	2017-05-16 13:32:44.493972100 -0500
+@@ -298,7 +298,7 @@ case $host_os in
+      libmikmod_driver_pulseaudio=no
+      libmikmod_driver_stdout=no
+      libmikmod_driver_sdl=no ;;
+-  cygwin*|darwin*)
++  darwin*)
+      libmikmod_driver_oss=no
+      libmikmod_driver_esd=no
+      libmikmod_driver_nas=no

@@ -1,5 +1,5 @@
 NAME="libmikmod"
-VERSION=3.3.7
+VERSION=3.3.10
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MikMod sound library"
@@ -8,7 +8,7 @@ to add music and sound effects to an application. It is a powerful and
 flexible library, with a simple and easy-to-learn API. "
 HOMEPAGE="http://mikmod.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mikmod/libmikmod-${VERSION}.tar.gz"
-PATCH_URI="3.3.7-cygwin-drivers.patch"
+PATCH_URI="3.3.10-cygwin-drivers.patch"
 
 PKG_NAMES="${NAME}3 ${NAME}-devel"
 libmikmod3_CONTENTS="usr/bin/*-3.dll usr/share/doc/"
