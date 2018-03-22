@@ -1,5 +1,5 @@
 NAME="libmikmod"
-VERSION=3.3.11
+VERSION=3.3.11.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="MikMod sound library"
